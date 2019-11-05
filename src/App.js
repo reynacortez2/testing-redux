@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Grid, Row, Col } from 'react-bootstrap';
+import { Navbar, Container, Row, Col } from 'react-bootstrap';
 import ProductList from './components/ProductList';
 import ShoppingCart from './components/ShoppingCart';
 import './App.css';
@@ -8,15 +8,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar inverse staticTop>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#">Ecommerce</a>
-            </Navbar.Brand>
-          </Navbar.Header>
+        <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Navbar.Brand>
+            <a href="#">Ecommerce</a>
+          </Navbar.Brand>
         </Navbar>
-
-        <Grid>
+        <Container>
           <Row>
             <Col sm={8}>
               <ProductList />
@@ -25,10 +22,14 @@ class App extends Component {
               <ShoppingCart />
             </Col>
           </Row>
-        </Grid>
+        </Container>
       </div>
     );
   }
 }
 
 export default App;
+
+
+
+  
